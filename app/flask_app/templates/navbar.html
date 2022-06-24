@@ -1,0 +1,22 @@
+<!-- Shared Nav Bar -->
+<div class="navbar-fixed">
+  <nav>
+    <div class="nav-wrapper">
+      <a class="nav_header" href="#" ><img	src="{{ url_for('static', filename='img/beer_icon.svg')}}" height="50">Crushing Cold Ones</a>
+      <a href="/#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a id="nav_add" href="/#">Add Beer</a></li>
+        <li><a id="nav_login" href="/#">Login</a></li>
+        <li><a id="nav_logout" href="/#">Logout</a></li>
+        <li><a id="nav_sign_up" href="/#">Sign Up</a></li>
+      </ul>
+    </div>
+  </nav>
+</div>
+<ul class="sidenav" id="mobile-demo">
+  <li><a id="nav_add" href="/#">Add Beer</a></li>
+  <li><a id="nav_login" href="/#">Login</a></li>
+  <li><a id="nav_logout" href="/#">Logout</a></li>
+  <li><a id="nav_sign_up" href="/#">Sign Up</a></li>
+</ul>
+

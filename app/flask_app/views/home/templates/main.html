@@ -1,0 +1,57 @@
+{% extends "bootstrap/base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		{% block title %}Crushing Cold Ones{% endblock %}
+		{% block styles %}
+		{{super()}}
+		<script type=text/javascript>
+		  var $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
+		</script>
+		 <!-- Compiled and minified CSS -->
+		 <link rel="shortcut icon" type="image/png" href="{{ url_for('static', filename='img/favicon.ico') }}"/>
+		 <link rel="preconnect" href="https://fonts.gstatic.com">
+		 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+		 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+		 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+		{% endblock %}      
+	</head>
+	<body>
+	{% block navbar %}
+		{% include 'navbar.html' %}
+	{% endblock %}
+	{% block content %}
+		{% include 'home.html' %}
+		{% block footer %}
+			{% include 'footer.html' %}
+		{% endblock %}
+	{% endblock %}
+	{% block scripts %}
+		{{super()}}
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+		<script type="text/Javascript" src="{{ url_for('static', filename='js/main.js') }}"></script>
+		<script type="text/Javascript" src="{{ url_for('static', filename='js/search.js') }}"></script>
+		<script type="text/Javascript" src="{{ url_for('static', filename='js/user_management.js') }}"></script>
+		<script type="text/Javascript" src="{{ url_for('static', filename='js/autocomplete.js') }}"></script>
+		<script type="text/Javascript" src="{{ url_for('static', filename='js/add_beer.js') }}"></script>
+		<script type="text/javascript">
+			var csrf_token = "{{ csrf_token() }}";
+			$.ajaxSetup({
+				beforeSend: function(xhr, settings) {
+					if (!/^(GET|HEAD|OPTIONS|TRACE)$/i.test(settings.type) && !this.crossDomain) {
+						xhr.setRequestHeader('X-CSRFToken', csrf_token);
+
+						var token = sessionStorage.getItem('token');
+                		xhr.setRequestHeader('Authorization', 'Bearer: ' + token);
+					}
+				}
+
+			});
+		</script>
+	{%- endblock scripts %}
+	</body>
+</html>

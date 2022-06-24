@@ -1,0 +1,259 @@
+/*------------------------------------------------------------
+[Table of Contents]
+1. Body
+2. Nav Bar
+3. About
+4. Search Results
+5. Signup
+6. Footer
+7. Login
+8. Model Training
+9. Forms
+10. Add beer
+
+------------------------------------------------------------*/
+
+/* Colors */
+:root {
+  --active_color: #29b6f6;
+  --primary-color: #311a91;
+  --primary-light: #6745c2;
+  --secondary-color: #29b6f6;
+  --secondary-color-light: #73e8ff;
+  --accent-color: #d500f9;
+  --font-color-light: #ffffff;
+  --font-color-dark: black;
+}
+a:hover {
+  color: var(--active_color) !important;
+}
+a {
+  color: var(--active_color);
+}
+a:focus, a:hover {
+  color: var(--active_color);
+}
+.errors {
+  color: red;
+}
+/*------------------------------------------------------------
+1. Body
+------------------------------------------------------------*/
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif !important;
+  }
+main {
+  flex: 1 0 auto;
+}
+.header {
+  font-size: 3rem;
+  font-weight: 300;
+}
+/*------------------------------------------------------------
+2. Nav Bar
+------------------------------------------------------------*/
+nav {
+  color: var(--font-color-light) !important;
+  background-color: var(--primary-color);
+  font-weight: 200;
+}
+nav a {
+  color: var(--font-color-light) !important;
+  font-weight: 300;
+}
+.nav_header {
+  color: var(--font-color-light) !important;
+  font-size: 1.6rem;
+  font-weight: 300;
+  text-decoration: none !important;
+}
+#nav_logout {
+  display: none;
+}
+#nav_add {
+  display: none;
+}
+/*------------------------------------------------------------
+3. About
+------------------------------------------------------------*/
+/*------------------------------------------------------------
+4. Search Results
+------------------------------------------------------------*/
+.parent_search_row .row {
+  margin-bottom: 0 !important;
+}
+.card_title {
+    font-size: 2rem;
+    font-weight: 200;
+}
+/* .card-action {
+  background-color: var(--primary-color) !important;
+} */
+.chip {
+  background-color: var(--primary-color) !important;
+  color: var(--font-color-light) !important;
+}
+.thumbs {
+  cursor: pointer;
+  padding-left: 16px;
+}
+.active_thumb {
+  color: var(--accent-color);
+}
+#search_results b {
+  background-color: yellow;
+}
+.card-action a {
+  color:var(--active_color) !important;
+}
+.search_bar_border {
+  border: 1px solid black;
+}
+.search_icon {
+  top: .6rem !important;
+}
+.search_icon.prefix.active {
+  color: var(--active_color) !important;
+}
+#search_bar {
+  border-bottom: none !important;
+  box-shadow: none !important;
+  font-size: 24px;
+  font-weight: 200;
+  margin-bottom: 0 !important;
+}
+#search_bar_row {
+  padding-left: .75rem;
+  padding-right: .75rem;
+}
+#total_beers {
+  text-align: right;
+}
+.sort {
+  font-size: 14px;
+  font-weight: 200;
+}
+.sort_click {
+  cursor: pointer;
+}
+.active_class {
+  color: var(--active_color);
+}
+.autocomplete {
+  /*the container must be positioned relative:*/
+  position: relative;
+  display: inline-block;
+}
+.autocomplete-items {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+  top: 100%;
+  left: 0;
+  right: 0;
+  padding-top: 16px;
+}
+.autocomplete-items strong {
+  color: var(--active_color);
+}
+.autocomplete-items div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #fff;
+  font-weight: 300;
+}
+.autocomplete-header {
+  font-size: 1.2rem;
+  font-weight: 400 !important;
+  cursor: default !important;
+}
+.autocomplete-header:hover {
+  background-color: white !important;
+}
+.autocomplete-items div:hover {
+  /*when hovering an item:*/
+  background-color: #e9e9e9;
+}
+/*------------------------------------------------------------
+5. Signup
+------------------------------------------------------------*/
+#section_sign_up {
+  display: none;
+}
+/*------------------------------------------------------------
+6. Footer
+------------------------------------------------------------*/
+footer {
+  -webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+  box-shadow: 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+  background-color: var(--primary-color) !important;
+  color: var(--font-color-light) !important;
+  font-size: 1rem;
+  font-weight: 300;
+}
+/*------------------------------------------------------------
+7. Login
+------------------------------------------------------------*/
+#section_login {
+  display: none;
+}
+#section_forgot_password {
+  display: none;
+}
+.forgot_password {
+  padding-top: 16px
+}
+/*------------------------------------------------------------
+9. Forms
+------------------------------------------------------------*/
+.input-field>label {
+  font-weight: 300;
+  color: black !important;
+}
+.input-field>option {
+  font-weight: 300;
+  color: black !important;
+}
+.input-field {
+  font-weight: 300;
+  color: black !important;
+  font-family: 'Roboto', sans-serif !important;
+}
+.dropdown-content li>a, .dropdown-content li>span {
+  font-weight: 300;
+  color: black !important;
+  font-family: 'Roboto', sans-serif !important;
+}
+.select-wrapper input.select-dropdown:focus {
+  border-bottom: 1px solid var(--active_color) !important;
+}
+.active {
+  color: var(--active_color) !important;
+}
+input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):focus:not([readonly]), input[type=password]:not(.browser-default):focus:not([readonly]), input[type=email]:not(.browser-default):focus:not([readonly]), input[type=url]:not(.browser-default):focus:not([readonly]), input[type=time]:not(.browser-default):focus:not([readonly]), input[type=date]:not(.browser-default):focus:not([readonly]), input[type=datetime]:not(.browser-default):focus:not([readonly]), input[type=datetime-local]:not(.browser-default):focus:not([readonly]), input[type=tel]:not(.browser-default):focus:not([readonly]), input[type=number]:not(.browser-default):focus:not([readonly]), input[type=search]:not(.browser-default):focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {
+  border-bottom: 1px solid var(--active_color) !important;
+  box-shadow: 0 1px 0 0 var(--active_color) !important;
+}
+.btn {
+  color: #ffffff !important;
+  background-color: black !important;
+}
+.btn:hover {
+  color: black !important;
+  background-color: var(--active_color) !important;
+}
+input.valid {
+  border-bottom: 1px solid var(--active_color) !important;
+  box-shadow: 0 1px 0 0 var(--active_color) !important;
+}
+/*------------------------------------------------------------
+10. Add Beer
+------------------------------------------------------------*/
+#section_add {
+  display: none;
+}

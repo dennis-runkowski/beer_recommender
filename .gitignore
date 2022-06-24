@@ -1,0 +1,5 @@
+cold_ones_pkg.egg.info
+build/RediSearch
+data/*/*.json
+analyze/*.csv
+analyze/*.npz

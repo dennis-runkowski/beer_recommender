@@ -1,0 +1,7 @@
+setup.py
+cold_ones_pkg/__init__.py
+cold_ones_pkg/local_config.py
+cold_ones_pkg.egg-info/PKG-INFO
+cold_ones_pkg.egg-info/SOURCES.txt
+cold_ones_pkg.egg-info/dependency_links.txt
+cold_ones_pkg.egg-info/top_level.txt

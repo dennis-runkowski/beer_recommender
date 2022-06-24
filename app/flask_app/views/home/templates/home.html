@@ -1,0 +1,253 @@
+<main>
+  <div class="section_class" id="section_search">
+    <div id="form_token" data-token="{{ csrf_token() }}"></div>
+    <!-- <div class="row">
+      <div class="col s12">
+        <div class="header center">Crushing Cold Ones</div>
+      </div>
+    </div> -->
+    <div class="parent_search_row row">
+      <div class="col l6 s12 offset-l3">
+        <div class="row">
+          <div class="col s12">
+            <div id="search_bar_row" class="row">
+              <div class="autocomplete search_bar_border input-field col s12">
+                <i class="search_icon material-icons prefix">search</i>
+                <input type="text" id="search_bar">
+                <!-- <label for="search_bar">Search Beers</label> -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="center col s2">
+            <span><i id="abc" class="sort sort_click material-icons prefix" data-sort="abc">sort_by_alpha</i></span>
+          </div>
+          <div class="center col s2">
+            <span><i id="abv" class="sort sort_click material-icons prefix" data-sort="abv">sort</i></span>
+            <span class="sort">ABV</span>
+          </div>
+          <div class="center col s2">
+            <span><i id="ibu" class="sort sort_click material-icons prefix" data-sort="ibu">sort</i></span>
+            <span class="sort">IBU</span>
+          </div>
+          <div class="center col s2">
+            <span><i id="my_beers" class="sort sort_click material-icons prefix" data-sort="my_beers">favorite</i></span>
+            <span class="sort">My Beers</span>
+          </div>
+          <div id="total_beers" class="sort col s4"></div>
+        </div>
+      </div>
+    </div>
+    <div id="search_results_row" class="row">
+      <div class="col l6 s12 offset-l3">
+        <div class="login_errors errors"></div>
+        <div id="search_results"></div>
+      </div>
+    </div>
+  </div>
+  <div class="section_class" id="section_login">
+    <div class="row">
+      <div class="col l6 s12 offset-l3">
+        <h2 class="header center">Login</h2>
+        <div id="login_row" class="row">
+          <div id="logged_in" class="center"></div>
+          <form id="login_form" role="form">
+            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+            <div class="row">
+              <div id="login_errors" class="errors"></div>
+              <div class="input-field col s12">
+                <input type="text" id="username" name="username" class="validate">
+                <label for="username">Username</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input type="password" id="password" name="password" class="validate">
+                <label for="password">Password</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col s12 center">
+                <button id="login_button" class="btn waves-effect waves-light">Login</button>
+                <div class="forgot_password"><a id="section_forgot" href="#">Forgot Password?</a></div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section_class" id="section_forgot_password">
+    <div class="row">
+      <div class="col l6 s12 offset-l3 center">
+        <h2 class="header">Forgot Password</h2>
+        <div>Get a token to reset your password.</div>
+        <div id="forgot_errors" class="errors"></div>
+        <form id="forgot_password_form" role="form">
+          <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+          <div class="row">
+            <div class="input-field col s12">
+              <input type="text" id="forgot_email" name="forgot_email" class="validate">
+              <label for="forgot_email">Email</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col s12">
+              <button id="forgot_button" class="btn waves-effect waves-light">Send</button>
+              <div class="reset_password"><a id="side_section_reset" href="#">Reset Password</a></div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="section_class" id="section_sign_up">
+    <div  class="row">
+      <div class="col l6 s12 offset-l3">
+        <div class="row">
+          <div class="col s12">
+            <h2 class="header center">Sign Up</h2>
+          </div>
+        </div>
+        <form id="signup_form" role="form">
+          <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+          <div class="row">
+            <div id="signup_error" class="errors"></div>
+            <div id="signup_email_error" class="errors"></div>
+            <div class="input-field col s12">
+              <input type="text" id="email_signup" name="email_signup" class="validate">
+              <label for="email_signup">Email</label>
+            </div>
+          </div>
+          <div class="row">
+            <div id="signup_username_error" class="errors"></div>
+            <div class="input-field col s12">
+              <input type="text" id="username_signup" name="username_signup" class="validate">
+              <label for="username_signup">Username</label>
+            </div>
+          </div>
+          <div class="row">
+            <div id="signup_password_error" class="errors"></div>
+            <div class="input-field col s12">
+              <input type="password" id="password_signup" name="password_signup" class="validate">
+              <label for="password_signup">Password</label>
+            </div>
+          </div>
+          <div class="row">
+            <div id="signup_confirm_error" class="errors"></div>
+            <div class="input-field col s12">
+              <input type="password" id="password_confirm_signup" name="password_confirm_signup" class="validate">
+              <label for="password_confirm_signup">Confirm Password</label>
+            </div>
+          </div>
+          <div id="signup_save" class="row">
+            <div class="col s12 center">
+              <button id="signup_button" class="btn waves-effect waves-light">Signup</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="section_class" id="section_add">
+    <div  class="row">
+      <div class="col l6 s12 offset-l3">
+        <div class="row">
+          <div class="col s12">
+            <h2 class="header center">Add Beer</h2>
+          </div>
+        </div>
+        <form id="add_form" role="form">
+          <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+          <div class="row">
+            <div id="add_error" class="errors"></div>
+            <div id="beer_add_error" class="errors"></div>
+            <div class="input-field col s12">
+              <input type="text" id="beer_add" name="beer_add" class="validate">
+              <label for="beer_add">Beer Name *</label>
+            </div>
+          </div>
+          <div class="row">
+            <div id="style_add_error" class="errors"></div>
+            <div class="autocomplete input-field col s12">
+              <select id="style_add" name="style_add">
+                <option value="" disabled selected>Beer Style</option>
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <div id="abv_add_error" class="errors"></div>
+            <div class="input-field col s12">
+              <input type="text" id="abv_add" name="abv_add" class="validate">
+              <label for="abv_add">Beer ABV *</label>
+            </div>
+          </div>
+          <div class="row">
+            <div id="ibu_add_error" class="errors"></div>
+            <div class="input-field col s12">
+              <input type="text" id="ibu_add" name="ibu_add" class="validate">
+              <label for="ibu_add">Beer IBU *</label>
+            </div>
+          </div>
+          <div class="row">
+            <div id="description_add_error" class="errors"></div>
+            <div class="input-field col s12">
+              <input type="text" id="description_add" name="description_add" class="validate">
+              <label for="description_add">Beer Description *</label>
+            </div>
+          </div>
+          <div class="row">
+            <div id="brewer_add_error" class="errors"></div>
+            <div class="input-field col s12">
+              <input type="text" id="brewer_add" name="brewer_add" class="validate">
+              <label for="brewer_add">Brewer Name *</label>
+            </div>
+          </div>
+          <div class="row">
+            <div id="brewer_description_add_error" class="errors"></div>
+            <div class="input-field col s12">
+              <input type="text" id="brewer_description_add" name="brewer_description_add" class="validate">
+              <label for="brewer_description_add">Brewer Description</label>
+            </div>
+          </div>
+          <div class="row">
+            <div id="brewer_url_add_error" class="errors"></div>
+            <div class="input-field col s12">
+              <input type="text" id="brewer_url_add" name="brewer_url_add" class="validate">
+              <label for="brewer_url_add">Brewer Url</label>
+            </div>
+          </div>
+          <div class="row">
+            <div id="brewer_facebook_add_error" class="errors"></div>
+            <div class="input-field col s12">
+              <input type="text" id="brewer_facebook_add" name="brewer_facebook_add" class="validate">
+              <label for="brewer_facebook_add">Brewer Facebook</label>
+            </div>
+          </div>
+          <div class="row">
+            <div id="brewer_twitter_add_error" class="errors"></div>
+            <div class="input-field col s12">
+              <input type="text" id="brewer_twitter_add" name="brewer_twitter_add" class="validate">
+              <label for="brewer_twitter_add">Brewer Twitter</label>
+            </div>
+          </div>
+          <div class="row">
+            <div id="brewer_instagram_add_error" class="errors"></div>
+            <div class="input-field col s12">
+              <input type="text" id="brewer_instagram_add" name="brewer_instagram_add" class="validate">
+              <label for="brewer_instagram_add">Brewer Instagram</label>
+            </div>
+          </div>
+          <div id="add_save" class="row">
+            <div class="col s12 center">
+              <button id="add_beer_button" class="btn waves-effect waves-light">Add Beer</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="section_class" id="section_recommendations"></div>
+  <div class="section_class" id="section_my_beers"></div>
+</main>

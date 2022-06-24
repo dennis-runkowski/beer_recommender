@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"python.pythonPath": "/home/dennis_ubuntu/python3_environments/beer_recommender/bin/activate",
+		"python.linting.pep8Enabled": true,
+		"python.linting.pylintEnabled": true
+	}
+}

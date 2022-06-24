@@ -1,0 +1,1 @@
+from cold_ones_pkg.local_config import get_config
